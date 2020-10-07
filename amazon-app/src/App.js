@@ -1,16 +1,44 @@
 import React from 'react';
 import './App.css';
+import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import Header from './Header';
+
+
 
 function App() {
   return (
-    <div className="App">
-      
-      <h1>HELLO AMAZON</h1>
+    <Router>
 
-      <h2> Amazon</h2>
+        <div className="app">
 
-      
-    </div>
+          <Switch>
+              
+              <Route path="/checkout" >
+                
+                <h1> CHECKOUT</h1>
+                
+                </Route>    
+
+
+                <Route path="/login" >
+                
+                <h1> LOGIN</h1>
+                
+                </Route>  
+
+                <Route path="/" >
+                
+                <Header />
+                <h1> HOME </h1>
+                
+                
+                </Route>  
+
+              </Switch>
+         </div>
+
+    </Router>
+    
   );
 }
 
