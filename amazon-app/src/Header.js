@@ -76,7 +76,7 @@ function Header() {
 
         <ShoppingBasketIcon />
 
-        <span>0</span>
+        <span className="headeroptionLineTwo basket_count">0</span>
         </div>
      
      </Link>
