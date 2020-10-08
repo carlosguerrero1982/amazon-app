@@ -8,14 +8,16 @@ import StarIcon from '@material-ui/icons/Star';
 function Product ({id,title,image,price,rating}) {
     return (
         <div className="product">
-            
+            <div className="product_info">
+
             <p>{title}</p>
+
             <p className="price">
                 <small>€</small>
                  <strong>{price}</strong>
             </p>
 
-            <p>{image}</p>
+            
 
             <div className="product_rating">
 
@@ -23,16 +25,17 @@ function Product ({id,title,image,price,rating}) {
                 Array(rating)
                 .fill()
                 .map((_)=>(
-                    <p> <StarIcon /> </p>
-
+                    
+                    <p> <StarIcon   style={{fill: "yellow"}}/> </p>
+                    
                 ))
 
             }
-
+                </div>
             </div>
            
-            
-           
+            <img src={image} alt="" />
+           <button>Add to basket</button>
 
         </div>
     )
