@@ -16,7 +16,7 @@ function Home() {
 
                 id="12345686"
                 title="Learn React"
-                price={11.62}
+                price={10.50}
                 rating={3}
                 image="https://images-na.ssl-images-amazon.com/images/I/51S8VABMqeL._SX258_BO1,204,203,200_.jpg"
 
