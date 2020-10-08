@@ -1,7 +1,7 @@
 import React from 'react';
 import {useStateValue} from './StateProvider';
 import './Checkout.css';
-
+import CheckoutProduct from './CheckoutProduct';
 
 
 function Checkout() {
@@ -28,7 +28,21 @@ function Checkout() {
             ):(
                 <div>
 
-                <h2>Your Basket</h2>
+                <h2 className="checkout_title">Your Basket</h2>
+
+                {
+                    basket.map((item)=>(
+
+                        <CheckoutProduct 
+                        item={item.id}
+                        title={item.title}
+                        image={item.image}
+                        price={item.price}
+                        rating={item.rating}
+                        />
+                    ))
+                }
+                
                 
                 </div>
             )
