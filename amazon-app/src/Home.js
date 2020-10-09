@@ -13,7 +13,7 @@ function Home() {
             <div className="home_row">
            
             <Product 
-
+                    
                 id="12345686"
                 title="Learn React"
                 price={10.50}
@@ -53,7 +53,7 @@ function Home() {
                 title="Learn React"
                 price={11.62}
                 rating={3}
-                image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+                image="https://m.media-amazon.com/images/I/61+STjh-FlL._AC_SX480_SY360_.jpg"
 
                 />
 
