@@ -8,7 +8,7 @@ import CurrencyFormat from "react-currency-format";
 function Checkout() {
 
 
-    const [{basket}] =  useStateValue();
+    const [{basket,user}] =  useStateValue();
 
 
 
@@ -35,7 +35,7 @@ function Checkout() {
                 <div>
 
                 <h2 className="checkout_title">Your Basket</h2>
-
+             
                 {
                     basket?.map((item)=>(
 
