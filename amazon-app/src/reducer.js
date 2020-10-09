@@ -29,7 +29,8 @@ const reducer = (state,action) => {
                 ...state,
                 user:action.user,
 
-            }
+            };
+            
         case "ADD_TO_BASKET":
                 
                 return {

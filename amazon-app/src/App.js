@@ -17,13 +17,13 @@ function App() {
 
   useEffect(() => {
     
-     const unsubscribe= auth.onAuthStateChanged((authUser)=>{
+    const unsubscribe= auth.onAuthStateChanged((authUser)=>{
 
         if(authUser){
 
           dispatch({
             
-            TYPE:"SET_USER",
+            type:"SET_USER",
             user: authUser
         
         })
@@ -32,22 +32,23 @@ function App() {
 
           dispatch({
             
-            TYPE:"SET_USER",
+            type:"SET_USER",
             user: null
         
         });
 
         }
       });
+      
+      return ()=>{
 
-        return ()=>{
+        unsubscribe();
 
-          unsubscribe();
-        }
+      }
+      
+  }, [user])
 
-  }, [])
-
-  console.log("USER IS ", user);
+  
 
 
   return (
