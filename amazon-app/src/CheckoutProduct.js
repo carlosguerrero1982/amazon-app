@@ -3,7 +3,7 @@ import StarIcon from '@material-ui/icons/Star';
 import './CheckoutProduct.css';
 import {useStateValue} from './StateProvider';
 
-function CheckoutProduct(props) {
+function CheckoutProduct({id,title,image,price,rating}) {
 
 
     const [{basket},dispatch] =  useStateValue();
@@ -13,7 +13,7 @@ function CheckoutProduct(props) {
         dispatch({
 
             type:'REMOVE_FROM_BASKET',
-            id: props.id,
+            id: id,
 
         });
 
@@ -23,16 +23,16 @@ function CheckoutProduct(props) {
     return (
         <div className="checkoutproduct">
             
-        <img src={props.image} alt="" />
+        <img src={image} alt="" />
 
         <div className="checkoutproduct_info">
 
-            <p className="checkoutproduct_title">{props.title}</p>
+            <p className="checkoutproduct_title">{title}</p>
 
             <p className="checkoutproduct_price">
                 
                     <small>€</small>
-                    <strong>{props.price}</strong>
+                    <strong>{price}</strong>
                 
             </p>
 
@@ -40,7 +40,7 @@ function CheckoutProduct(props) {
 
 
             {
-                Array(props.rating)
+                Array(rating)
                 .fill()
                 .map((_)=>(
                     
